@@ -1,0 +1,432 @@
+/* nav bar is from https://codepen.io/Mark_Bell00/pen/vYELmNM*/
+nav {
+    &.primary-navigation {
+      display: block;
+
+      li {
+        list-style: none;
+        margin-left: 0;
+        display: inline-block;
+        padding: 0 30px;
+        text-decoration: none;
+        text-align: center;
+      }
+  
+      ul li {
+        list-style: none;
+        margin: 0 auto;
+        border-left: 2px solid #212122;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+      }
+  
+      li a {
+        color: #212122;
+      }
+  
+      li a:hover {
+        color: #ac8b6b;
+      }
+  
+      li:hover {
+        cursor: pointer;
+      }
+  
+      ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+        display: none;
+        background: rgb(223, 219, 219);
+      }
+  
+      ul li:hover > ul,
+      ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        min-width: 250px;
+        text-align: left;
+        padding-top: 20px;
+        box-shadow: 0px 3px 5px -1px #ccc;
+      }
+  
+      ul li ul li {
+        clear: both;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        border-style: none;
+      }
+  
+      ul li ul li a:hover {
+        padding-left: 10px;
+        border-left: 2px solid #ac8b6b;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  a {
+      text-decoration: none;
+      &:hover {
+          color: #E6DFD8;
+      }
+}
+  
+ul li ul li a { transition: all 0.5s ease; }
+
+header {
+  background-color: #E6DFD8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  font-family: 'Montserrat';
+  font-size: large;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 2%;
+}
+
+a.header-left {
+  color: #0C0C0C;
+  margin-top: 1.5%;
+  &:hover {
+    color: #ac8b6b
+  }
+}
+
+body {
+  font-family: 'Montserrat';font-size: 22px;
+  color: #0C0C0C;
+  background-color: #F1EFED;
+}
+
+.home_about {
+  padding-left: 15%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+
+.intro {
+  padding-left: 3%;
+  flex: 2;
+}
+
+.intro > h2 {
+  text-align: left;
+}
+
+.home_row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.home_row > img {
+  /*width: 40%;
+  height: 40%;*/
+  max-width: 40%;
+  height: auto;
+
+}
+
+.home_col {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home_col > button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.text_section {
+  margin: 0;
+  margin-left: 12%;
+  margin-right: 12%;
+  padding: 5px;
+  line-height: 1.6;
+}
+
+.home_images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.home_images > img{
+  width: 30%;
+  height: auto;
+}
+
+.myimage {
+  height: auto;
+  width: 25%;
+}
+
+.project_heading_row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.project_heading_col {
+  flex: 1;
+  align-items: flex-start;
+  margin-right: 5%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+hr {
+  margin-left: 12%;
+  margin-right: 12%;
+  border-top: 1px solid #ac8b6b;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #F1EFED;
+  /*margin-left: 12%; --------------- moves menu items*/
+}
+
+.button {
+  background-color: #ac8b6b;
+  color: #F1EFED;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #634222;
+  color: white;
+}
+
+footer {
+  background-color: #E6DFD8;
+  padding: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+footer > p > a {
+  color: #ac8b6b;
+  font-weight: bold;
+  &:hover {
+    color: #634222;
+  }
+}
+
+footer > address > a {
+  color: #ac8b6b;
+  font-weight: bold;
+  &:hover {
+    color: #634222;
+  }
+}
+
+
+.logos {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_logos {
+  flex-direction: row;
+  flex: 1;
+  width: 50px;
+  height: auto;
+  padding: 5px;
+}
+
+/* --------------------------------------------------------------------
+SLIDESHOW STYLING
+credit to: https://www.w3schools.com/howto/howto_js_slideshow.asp
+-----------------------------------------------------------------------*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 550px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* --------------------------------------------------------------------
+CONTACT PAGE
+credit to: https://www.w3schools.com/howto/howto_css_contact_form.asp
+-----------------------------------------------------------------------*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #ac8b6b;
+  color: #F1EFED;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #634222;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #F1EFED;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.error_message {
+  display: none;
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+
+
+@media only screen and (max-width: 1054px) {
+  .error_message {
+   /* display: contents;*/
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body {
+    background-color: #ac8b6b;
+  }
+  header, footer, nav, .home_about, .home_row, .home_col, hr, .home_other {
+    display: none;
+  }
+}
